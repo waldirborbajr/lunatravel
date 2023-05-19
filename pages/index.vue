@@ -1,11 +1,11 @@
 <template>
   <div>
-    <MainLayout></MainLayout>
+    <MainLayout>
+      <Alert />
+    </MainLayout>
   </div>
 </template>
 
-<script setup lang="ts">
-import MainLayout from "~/layouts/MainLayout.vue";
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss" scoped></style>

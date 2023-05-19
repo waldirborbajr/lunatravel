@@ -1,0 +1,10 @@
+<template>
+  <div class="flex p-4 bg-slate-600 w-ful text-slate-100">
+    <Icon name="material-symbols:currency-exchange" size="24" />
+    Luna Travel Monetary Services
+  </div>
+</template>
+
+<script setup></script>
+
+<style lang="scss" scoped></style>
