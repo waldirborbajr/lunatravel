@@ -1,6 +1,9 @@
 export const useUtils = () => {
-  const consLog = () => console.log("consLog");
+  const consLog = (msg: string) => console.log(`${msg}`);
+  const consErr = (msg: string) => console.error(`${msg}`);
+
   return {
     consLog,
+    consErr,
   };
 };

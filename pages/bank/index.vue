@@ -5,7 +5,7 @@
 
 <script setup lang="ts">
 const { consLog } = useUtils();
-consLog();
+consLog("BANK");
 </script>
 
 <style lang="scss" scoped></style>
