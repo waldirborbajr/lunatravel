@@ -1,7 +1,11 @@
 <template>
-  <div>Luna Travel Monetary Services</div>
+  <div>
+    <MainLayout></MainLayout>
+  </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import MainLayout from "~/layouts/MainLayout.vue";
+</script>
 
 <style lang="scss" scoped></style>

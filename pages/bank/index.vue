@@ -1,4 +1,5 @@
 <template>
+  <NuxtLink to="/">Home</NuxtLink>
   <div>Bank</div>
 </template>
 
