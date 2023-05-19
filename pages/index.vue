@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="Main">
     <MainLayout>
       <Alert />
     </MainLayout>
