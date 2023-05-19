@@ -1,6 +1,6 @@
 <template>
-  <div class="Main">
-    <Alert />
+  <div class="h-screen DefaultLayout bg-slate-700 text-slate-50">
+    <slot />
   </div>
 </template>
 
