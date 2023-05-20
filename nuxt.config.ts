@@ -1,25 +1,29 @@
-import { resolve } from "path";
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  alias: {
-    "@": resolve(__dirname, "/"),
-  },
-  modules: ["nuxt-icon", "@nuxtjs/tailwindcss"],
-  css: ["~/assets/css/main.css"],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@nuxtjs/i18n"],
+
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
     configPath: "tailwind.config",
-    exposeConfig: false,
+    exposeConfig: true,
     exposeLevel: 2,
-    config: {},
+    config: {
+      content: [
+        "components/**/*.{vue,js,ts}",
+        "layouts/**/*.vue",
+        "pages/**/*.vue",
+        "composables/**/*.{js,ts}",
+        "plugins/**/*.{js,ts}",
+        "App.{js,ts,vue}",
+        "app.{js,ts,vue}",
+        "Error.{js,ts,vue}",
+        "error.{js,ts,vue}",
+        "content/**/**.md",
+      ],
+    },
     injectPosition: "first",
     viewer: true,
   },
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
+
+  // Build
 });
