@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     exposeConfig: true,
     exposeLevel: 2,
     config: {
+      mode: "jit",
       content: [
         "components/**/*.{vue,js,ts}",
         "layouts/**/*.vue",
@@ -20,6 +21,15 @@ export default defineNuxtConfig({
         "error.{js,ts,vue}",
         "content/**/**.md",
       ],
+      theme: {
+        extend: {
+          colors: {
+            "bpp-header": "#343541",
+            "bpp-sidebar": "#40414f",
+          },
+        },
+      },
+      plugins: [],
     },
     injectPosition: "first",
     viewer: true,
