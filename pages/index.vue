@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-violet-500 Main">
+  <div class="Main">
     <Alert />
   </div>
 </template>
