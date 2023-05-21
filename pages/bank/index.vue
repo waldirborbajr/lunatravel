@@ -4,6 +4,10 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+  title: "Bank",
+});
+
 const { consLog } = useUtils();
 consLog("BANK");
 </script>
