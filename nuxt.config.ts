@@ -1,5 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  head: {
+    title: "Luna Travel Monetary Services",
+    htmlAttrs: {
+      lang: "en",
+    },
+    meta: [{ charset: "utf-8" }],
+  },
+
   modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@nuxtjs/i18n"],
 
   tailwindcss: {
@@ -36,4 +44,15 @@ export default defineNuxtConfig({
   },
 
   // Build
+  css: ["@/assets/css/tailwind.css"],
+  build: {
+    postcss: {
+      postcssOptions: {
+        plugins: {
+          tailwindcss: {},
+          autoprefixer: {},
+        },
+      },
+    },
+  },
 });
