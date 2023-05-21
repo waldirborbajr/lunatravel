@@ -31,7 +31,7 @@
                   class="py-3 px-4 placeholder-gray-300 rounded-lg border-2 border-gray-100 appearance-none focus:ring-2 focus:ring-green-600 focus:shadow-lg focus:outline-none" />
               </div>
               <div id="button" class="flex flex-col my-5 w-full">
-                <button type="button" class="py-4 w-full text-green-100 bg-green-600 rounded-lg">
+                <button type="button" class="py-4 w-full text-green-100 bg-green-600 rounded-lg" @click="validateLogin">
                   <div class="flex flex-row justify-center items-center">
                     <div class="mr-2">
                       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -61,6 +61,11 @@
 definePageMeta({
   layout: false,
 });
+
+const validateLogin = () => {
+  console.log("validateLogin");
+  navigateTo("/");
+};
 </script>
 
 <style lang="scss" scoped></style>
