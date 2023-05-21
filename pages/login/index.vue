@@ -5,12 +5,12 @@
       <div class="flex flex-col justify-evenly h-screen text-center md:flex-row md:items-center md:text-left">
         <div class="flex flex-col w-full">
           <div>
-            <Icon name="ic:round-currency-exchange" size="64" />
+            <Icon name="ic:round-currency-exchange" size="64px" stroke-width="4" class="text-slate-300" />
           </div>
           <h1 class="text-5xl font-bold text-gray-800">
             Luna Travel Monetary Services
           </h1>
-          <p class="mx-auto w-5/12 text-gray-500 md:mx-0">
+          <p class="mx-auto w-5/12 md:mx-0 text-slate-200">
             Control and monitorize your website data from dashboard.
           </p>
         </div>
