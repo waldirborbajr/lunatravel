@@ -8,7 +8,12 @@ export default defineNuxtConfig({
     meta: [{ charset: "utf-8" }],
   },
 
-  modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@nuxtjs/i18n"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "nuxt-icon",
+    "@nuxtjs/i18n",
+    // "@nuxtjs/axios",
+  ],
 
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
@@ -42,6 +47,9 @@ export default defineNuxtConfig({
     injectPosition: "first",
     viewer: true,
   },
+
+  // False it is user render mode
+  // ssr: false,
 
   // Build
   css: ["@/assets/css/tailwind.css"],
