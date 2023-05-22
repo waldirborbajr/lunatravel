@@ -68,12 +68,14 @@
                 name="mdi-light:delete"
                 class="transition duration-200 ease-in-out hover:scale-125"
                 color="red"
+                size="24px"
                 @click="deleteBank(b['id'])"
               />
               <Icon
                 name="mdi-light:pencil"
                 class="transition duration-200 ease-in-out hover:scale-125"
                 color="green"
+                size="24px"
                 @click="editBank(b['id'])"
               />
             </td>
@@ -92,32 +94,12 @@ useHead({
   title: "Bank Management",
 });
 
-const url = "http://localhost:9090/api/v1";
+const uri = "http://localhost:9090/api/v1/bank";
+onBeforeMount(async () => {
+  const { data: banks, pending, error } = await useFetch(uri);
 
-// onBeforeMount(async () => {
-const { data: banks } = await useFetch("http://localhost:9090/api/v1/bank");
-// const { data: banks } = await useFetch("https://fakestoreapi.com/products");
-// transform: (_banks) => _banks.data.data;
-console.log(toRaw(banks.data));
-// });
-
-// const browseList = async ({ $axios }) => {
-//   status.loading = true;
-//   await $axios
-//     .$get("/bank")
-//     .then((response) => {
-//       bank.banks = response.data.data;
-//       status.loading = false;
-//     })
-//     .catch(() =>
-//       notify({
-//         group: "top-right",
-//         type: "error",
-//         text: "ERROR: load",
-//       })
-//     )
-//     .finally(() => (status.state = false));
-// };
+  console.log(toRaw(banks.data));
+});
 </script>
 
 <style lang="scss" scoped></style>
