@@ -59,7 +59,7 @@
           </tr>
         </thead>
         <tbody class="w-full">
-          <tr v-for="b in banks" :key="b.id">
+          <tr v-for="b in banks.data" :key="b.id">
             <td>{{ b.name }}</td>
             <td>{{ b.agency }}</td>
             <td>{{ b.account }}</td>
@@ -95,11 +95,10 @@ useHead({
 });
 
 const uri = "http://localhost:9090/api/v1/bank";
-onBeforeMount(async () => {
-  const { data: banks, pending, error } = await useFetch(uri);
-
-  console.log(toRaw(banks.data));
-});
+// const uri = "https://jsonplaceholder.typicode.com/posts"
+// const { data: banks } = await useAsyncData("banks", () => $fetch(uri));
+const { data: banks } = await useFetch(uri);
+console.log(banks.data);
 </script>
 
 <style lang="scss" scoped></style>
