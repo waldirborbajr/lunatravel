@@ -1,6 +1,16 @@
 {
   "name": "lunatravel",
+  "contributors": [
+    "Pericles <>",
+    "Waldir Borba Junior <wborbajr@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/waldirborbajr/lunatravel"
+  },
+  "license": "MIT",
   "version": "0.1.0",
+  "description": "Luna Travel Monetary Services",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -19,5 +29,7 @@
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@nuxtjs/toast": "^3.3.1"
+  }
 }

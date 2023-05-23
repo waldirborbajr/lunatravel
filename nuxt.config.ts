@@ -8,12 +8,7 @@ export default defineNuxtConfig({
     meta: [{ charset: "utf-8" }],
   },
 
-  modules: [
-    "@nuxtjs/tailwindcss",
-    "nuxt-icon",
-    "@nuxtjs/i18n",
-    // "@nuxtjs/axios",
-  ],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@nuxtjs/i18n"],
 
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
