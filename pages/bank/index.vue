@@ -88,7 +88,6 @@
 </template>
 
 <script setup lang="ts">
-import { notify } from "@kyvg/vue3-notification";
 
 useHead({
   title: "Bank Management",
