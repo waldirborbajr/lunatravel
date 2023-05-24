@@ -128,6 +128,13 @@ banks.value = await useFetch("/api/bank/get-all-banks");
 // }, 2000);
 // });
 
+const deleteBank = async (id: Number) => {
+  await useFetch(`/api/bank/delete-bank/${id}`, {
+    method: "DELETE",
+  });
+  banks.value = await useFetch("/api/bank/get-all-banks");
+};
+
 const editBank = async (id: BigInt) => {
   currentBank.value = await useFetch(`/api/bank/get-bank-by-id/${id}`);
 
@@ -170,7 +177,6 @@ const submit = async () => {
   }
 
   if (isUpdate.value) {
-    console.log(bankid.value);
     await useFetch(`/api/bank/update-bank/${bankid.value}`, {
       method: "PATCH",
       body: {
