@@ -1,10 +1,5 @@
 lockfileVersion: '6.0'
 
-dependencies:
-  '@nuxtjs/toast':
-    specifier: ^3.3.1
-    version: 3.3.1
-
 devDependencies:
   '@nuxtjs/i18n':
     specifier: 8.0.0-beta.12
@@ -1082,12 +1077,6 @@ packages:
       - ts-node
       - webpack
     dev: true
-
-  /@nuxtjs/toast@3.3.1:
-    resolution: {integrity: sha512-b9JpyjSw5ZOyjskBvNc4NEebe0qxB6LivBlO84gHOnsaF23rLkJoBfVNDcXwGNDl7vm09yM4WqBGTkm/OQ0ZCQ==}
-    dependencies:
-      vue-toasted: 1.1.28
-    dev: false
 
   /@prisma/client@4.14.1(prisma@4.14.1):
     resolution: {integrity: sha512-TZIswkeX1ccsHG/eN2kICzg/csXll0osK3EHu1QKd8VJ3XLcXozbNELKkCNfsCUvKJAwPdDtFCzF+O+raIVldw==}
@@ -2606,6 +2595,14 @@ packages:
 
   /enhanced-resolve@5.14.0:
     resolution: {integrity: sha512-+DCows0XNwLDcUhbFJPdlQEVnT2zXlCv7hPxemTz86/O+B/hCQ+mb7ydkPKiflpVraqLPCAfu7lDy+hBXueojw==}
+    engines: {node: '>=10.13.0'}
+    dependencies:
+      graceful-fs: 4.2.11
+      tapable: 2.2.1
+    dev: true
+
+  /enhanced-resolve@5.14.1:
+    resolution: {integrity: sha512-Vklwq2vDKtl0y/vtwjSesgJ5MYS7Etuk5txS8VdKL4AOS1aUlD96zqIfsOSLQsdv3xgMRbtkWM8eG9XDfKUPow==}
     engines: {node: '>=10.13.0'}
     dependencies:
       graceful-fs: 4.2.11
@@ -6151,10 +6148,6 @@ packages:
       vue: 3.3.4
     dev: true
 
-  /vue-toasted@1.1.28:
-    resolution: {integrity: sha512-UUzr5LX51UbbiROSGZ49GOgSzFxaMHK6L00JV8fir/CYNJCpIIvNZ5YmS4Qc8Y2+Z/4VVYRpeQL2UO0G800Raw==}
-    dev: false
-
   /vue@3.3.4:
     resolution: {integrity: sha512-VTyEYn3yvIeY1Py0WaYGZsXnz3y5UnGi62GjVEqvEGPl6nxbOrCXbVOTQWBEJUqAyTUk2uJ5JLVnYJ6ZzGbrSw==}
     dependencies:
@@ -6216,7 +6209,7 @@ packages:
       acorn-import-assertions: 1.9.0(acorn@8.8.2)
       browserslist: 4.21.5
       chrome-trace-event: 1.0.3
-      enhanced-resolve: 5.14.0
+      enhanced-resolve: 5.14.1
       es-module-lexer: 1.2.1
       eslint-scope: 5.1.1
       events: 3.3.0
