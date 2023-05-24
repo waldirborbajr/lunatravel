@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 tr:nth-child(even) {
-  @apply bg-slate-400;
+  @apply bg-slate-300 text-slate-800;
 }
 
 tr:nth-child(od) {

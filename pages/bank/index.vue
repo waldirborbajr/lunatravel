@@ -1,7 +1,7 @@
 <template>
   <div id="city" class="grid grid-cols-2 gap-2 p-2 mx-auto">
     <!-- left -->
-    <div class="p-4 bg-gray-600 rounded-md border-green-600 shadow-slate-300">
+    <div class="p-4 rounded-md bg-slate-400">
       <h2 class="mb-2 text-xl font-medium tracking-wider text-slate-800">
         Bank Management
       </h2>
@@ -54,7 +54,7 @@
     </div>
 
     <!-- right -->
-    <div class="p-4 bg-gray-400 rounded-md border-orange-600 shadow-slate-300">
+    <div class="p-4 bg-slate-400 rounded-md">
       RIGHT
       <table class="min-w-full text-sm font-light text-left">
         <thead
