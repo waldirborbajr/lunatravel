@@ -55,7 +55,6 @@
 
     <!-- right -->
     <div class="p-4 bg-slate-400 rounded-md">
-      RIGHT
       <table class="min-w-full text-sm font-light text-left">
         <thead
           class="font-medium border-b bg-slate-800 dark:border-neutral-500"
