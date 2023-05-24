@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
     configPath: "tailwind.config",
-    exposeConfig: true,
+    exposeConfig: false,
     exposeLevel: 2,
     config: {
       mode: "jit",

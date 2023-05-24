@@ -101,7 +101,7 @@ useHead({
 let banks = ref([]);
 
 onBeforeMount(async () => {
-  banks.value = await useFetch("/api/prisma/get-all-banks");
+  banks.value = await useFetch("/api/bank/get-all-banks");
   // const { data: banks } = await useFetch("/api/prisma/get-all-banks");
   console.log(banks);
   // setTimeout(() => {
