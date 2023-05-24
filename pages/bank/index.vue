@@ -59,10 +59,11 @@
           </tr>
         </thead>
         <tbody class="w-full">
+          <!-- <tr v-for="b in banks.data" :key="b.id"> -->
           <tr v-for="b in banks.data" :key="b.id">
-            <td>{{ b.name }}</td>
-            <td>{{ b.agency }}</td>
-            <td>{{ b.account }}</td>
+            <td class="text-slate-900">{{ b.name }}</td>
+            <td class="text-slate-900">{{ b.agency }}</td>
+            <td class="text-slate-900">{{ b.account }}</td>
             <td class="flex gap-4 p-2">
               <Icon
                 name="mdi-light:delete"
@@ -88,16 +89,25 @@
 </template>
 
 <script setup lang="ts">
-
 useHead({
   title: "Bank Management",
 });
 
-const uri = "http://localhost:9090/api/v1/bank";
+// const uri = "http://localhost:9090/api/v1/bank";
 // const uri = "https://jsonplaceholder.typicode.com/posts"
-// const { data: banks } = await useAsyncData("banks", () => $fetch(uri));
-const { data: banks } = await useFetch(uri);
-console.log(banks.data);
+// const { data: banks } = await useFetch(uri);
+// console.log(banks.data);
+
+let banks = ref([]);
+
+onBeforeMount(async () => {
+  banks.value = await useFetch("/api/prisma/get-all-banks");
+  // const { data: banks } = await useFetch("/api/prisma/get-all-banks");
+  console.log(banks);
+  // setTimeout(() => {
+  //   console.log(" loading ... ");
+  // }, 2000);
+});
 </script>
 
 <style lang="scss" scoped></style>
