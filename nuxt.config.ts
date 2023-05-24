@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  // page: true,
+  page: true,
 
   head: {
     title: "Luna Travel Monetary Services",
