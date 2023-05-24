@@ -1,83 +1,82 @@
 <template>
-  <div id="bank" class="container grid grid-cols-2 gap-2 p-2 mx-auto">
-    <!-- Form Section -->
-    <form @submit.preven="submit()">
-      <dir
-        class="p-2 rounded-xl border shadow-lg border-slate-300 bg-slate-400"
-      >
-        <h2 class="mb-2 text-xl font-medium tracking-wider text-slate-800">
-          Bank Form
-        </h2>
-        <div class="mx-auto max-w-lg">
-          <div class="py-1">
-            <span class="px-1 text-sm text-gray-600">Bank Name</span>
-            <input
-              class="block py-2 px-3 w-full placeholder-gray-600 text-black bg-white rounded-lg border-2 border-gray-300 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none text-md"
-              placeholder=""
-              v-model="name"
-              inputType="text"
-              :error="error && error.type == 'name' ? error.message : ''"
-            />
-          </div>
-          <div class="py-1">
-            <span class="px-1 text-sm text-gray-600">Agency</span>
-            <input
-              class="block py-2 px-3 w-full placeholder-gray-600 text-black bg-white rounded-lg border-2 border-gray-300 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none text-md"
-              placeholder=""
-              v-model="agency"
-              inputType="text"
-              :error="error && error.type == 'agency' ? error.message : ''"
-            />
-          </div>
-          <div class="py-1">
-            <span class="px-1 text-sm text-gray-600">Account Number</span>
-            <input
-              class="block py-2 px-3 w-full placeholder-gray-600 text-black bg-white rounded-lg border-2 border-gray-300 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none text-md"
-              placeholder=""
-              v-model="account"
-              inputType="text"
-              :error="error && error.type == 'account' ? error.message : ''"
-            />
-          </div>
-        </div>
-        <!-- Buttons Section -->
-        <div class="grid grid-cols-2 gap-2">
+  <div id="city" class="grid grid-cols-2 gap-2 p-2 mx-auto">
+    <!-- left -->
+    <div class="p-4 bg-gray-600 rounded-md border-green-600 shadow-slate-300">
+      <h2 class="mb-2 text-xl font-medium tracking-wider text-slate-800">
+        Bank Management
+      </h2>
+      <form @submit.preven="submit()">
+        <section class="mb4-px-2">
+          <span class="px-1 text-sm">Bank Name</span>
+          <input
+            placeholder=""
+            v-model="name"
+            inputType="text"
+            :error="error && error.type == 'name' ? error.message : ''"
+            class="block p-1 w-full rounded-lg border focus:border-blue-900 rounder border-slate-500"
+          />
+        </section>
+        <section class="mb4-px-2">
+          <span class="px-1 text-sm">Agency</span>
+          <input
+            placeholder=""
+            v-model="agency"
+            inputType="text"
+            :error="error && error.type == 'agency' ? error.message : ''"
+            class="block p-1 w-full rounded-lg border focus:border-blue-900 rounder border-slate-500"
+          />
+        </section>
+        <section class="mb4-px-2">
+          <span class="px-1 text-sm">Account</span>
+          <input
+            placeholder=""
+            v-model="account"
+            inputType="text"
+            :error="error && error.type == 'account' ? error.message : ''"
+            class="block p-1 w-full rounded-lg border focus:border-blue-900 rounder border-slate-500"
+          />
+        </section>
+        <div class="grid grid-cols-2 gap-2 p-4">
           <button
-            class="block py-3 px-6 mt-3 w-full text-lg font-semibold text-white bg-red-800 rounded-lg shadow-xl hover:text-white hover:bg-red-500"
+            class="block p-3 w-full text-lg font-semibold text-white bg-red-800 rounded-lg shadow-xl hover:text-white hover:bg-red-500"
           >
             Cancel
           </button>
           <button
-            class="block py-3 px-6 mt-3 w-full text-lg font-semibold text-white bg-green-800 rounded-lg shadow-xl hover:text-white hover:bg-green-500"
+            class="block p-3 w-full text-lg font-semibold text-white bg-green-800 rounded-lg shadow-xl hover:text-white hover:bg-green-500"
             :disabled="isWorking"
             type="submit"
           >
             Register
           </button>
         </div>
-      </dir>
-    </form>
+      </form>
+    </div>
 
-    <!-- Gird Section -->
-    <div class="p-4 rounded-xl border shadow-lg border-slate-300 bg-slate-400">
-      <table
-        class="w-full bg-white table-auto table-striped border-collapse: collpase"
-      >
-        <thead class="bg-slate-700 text-slate-300">
-          <tr class="align-left items-left">
+    <!-- right -->
+    <div class="p-4 bg-gray-400 rounded-md border-orange-600 shadow-slate-300">
+      RIGHT
+      <table class="min-w-full text-sm font-light text-left">
+        <thead
+          class="font-medium border-b bg-slate-800 dark:border-neutral-500"
+        >
+          <tr>
             <th>Bank</th>
             <th>Agency</th>
             <th>Account</th>
             <th>Action</th>
           </tr>
         </thead>
-        <tbody class="w-full">
-          <!-- <tr v-for="b in banks.data" :key="b.id"> -->
-          <tr v-for="b in banks.data" :key="b.id">
-            <td class="text-slate-900">{{ b.name }}</td>
-            <td class="text-slate-900">{{ b.agency }}</td>
-            <td class="text-slate-900">{{ b.account }}</td>
-            <td class="flex gap-4 p-2">
+        <tbody>
+          <tr
+            v-for="b in banks.data"
+            :key="b.id"
+            class="border-b dark:border-neutral-500"
+          >
+            <td>{{ b.name }}</td>
+            <td>{{ b.agency }}</td>
+            <td>{{ b.account }}</td>
+            <td class="flex gap-6">
               <Icon
                 name="mdi-light:delete"
                 class="transition duration-200 ease-in-out hover:scale-125"
@@ -96,7 +95,6 @@
           </tr>
         </tbody>
       </table>
-      <div>P A G I N G</div>
     </div>
   </div>
 </template>
