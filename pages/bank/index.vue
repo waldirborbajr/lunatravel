@@ -10,9 +10,7 @@
         </h2>
         <div class="mx-auto max-w-lg">
           <div class="py-1">
-            <span class="px-1 text-sm text-gray-600"
-              >Bank Name {{ bankid }} - {{ isUpdate }}</span
-            >
+            <span class="px-1 text-sm text-gray-600">Bank Name</span>
             <input
               class="block py-2 px-3 w-full placeholder-gray-600 text-black bg-white rounded-lg border-2 border-gray-300 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none text-md"
               placeholder=""
@@ -40,7 +38,6 @@
               inputType="text"
               :error="error && error.type == 'account' ? error.message : ''"
             />
-            <input v-model="bankid" inputType="text" class="text-black" />
           </div>
         </div>
         <!-- Buttons Section -->
