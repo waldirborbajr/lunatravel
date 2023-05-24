@@ -120,7 +120,7 @@ let error = ref(null);
 let banks = ref([]);
 
 // onBeforeMount(async () => {
-banks.value = await useFetch("/api/bank/get-all-banks");
+banks.value = await useFetch("/api/bank/getall");
 // const { data: banks } = await useFetch("/api/prisma/get-all-banks");
 // console.log(banks);
 // setTimeout(() => {
@@ -129,14 +129,14 @@ banks.value = await useFetch("/api/bank/get-all-banks");
 // });
 
 const deleteBank = async (id: Number) => {
-  await useFetch(`/api/bank/delete-bank/${id}`, {
+  await useFetch(`/api/bank/delete/${id}`, {
     method: "DELETE",
   });
-  banks.value = await useFetch("/api/bank/get-all-banks");
+  banks.value = await useFetch("/api/bank/getall");
 };
 
 const editBank = async (id: BigInt) => {
-  currentBank.value = await useFetch(`/api/bank/get-bank-by-id/${id}`);
+  currentBank.value = await useFetch(`/api/bank/getone/${id}`);
 
   if (currentBank.value.data) {
     bankid.value = currentBank.value.data.id;
@@ -177,7 +177,7 @@ const submit = async () => {
   }
 
   if (isUpdate.value) {
-    await useFetch(`/api/bank/update-bank/${bankid.value}`, {
+    await useFetch(`/api/bank/update/${bankid.value}`, {
       method: "PATCH",
       body: {
         id: bankid.value,
@@ -187,7 +187,7 @@ const submit = async () => {
       },
     });
   } else {
-    await useFetch(`/api/bank/create-bank/`, {
+    await useFetch(`/api/bank/create/`, {
       method: "POST",
       body: {
         name: name.value,
