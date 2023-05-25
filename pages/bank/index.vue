@@ -1,64 +1,52 @@
 <template>
-  <div id="city" class="grid grid-cols-2 gap-2 p-2 mx-auto">
+  <div class="grid-2cols">
     <!-- left -->
-    <div class="p-4 rounded-md bg-slate-400">
-      <h2 class="mb-2 text-xl font-medium tracking-wider text-slate-800">
-        Bank Management
-      </h2>
+    <div class="grid-left">
+      <h2 class="form-title">Bank Management</h2>
       <form @submit.preven="submit()">
-        <section class="mb4-px-2">
-          <span class="px-1 text-sm text-slate-900">Bank Name</span>
+        <section class="form-section">
+          <span class="form-label">Bank Name</span>
           <input
             placeholder=""
             v-model="name"
             inputType="text"
             :error="error && error.type == 'name' ? error.message : ''"
-            class="block p-1 w-full rounded-lg border focus:border-blue-900 text-slate-800 rounder border-slate-500"
+            class="form-input"
           />
         </section>
-        <section class="mb4-px-2">
-          <span class="px-1 text-sm text-slate-900">Agency</span>
+        <section class="form-section">
+          <span class="form-label">Agency</span>
           <input
             placeholder=""
             v-model="agency"
             inputType="text"
             :error="error && error.type == 'agency' ? error.message : ''"
-            class="block p-1 w-full rounded-lg border focus:border-blue-900 text-slate-800 rounder border-slate-500"
+            class="form-input"
           />
         </section>
-        <section class="mb4-px-2">
-          <span class="px-1 text-sm text-slate-900">Account</span>
+        <section class="form-section">
+          <span class="form-label">Account</span>
           <input
             placeholder=""
             v-model="account"
             inputType="text"
             :error="error && error.type == 'account' ? error.message : ''"
-            class="block p-1 w-full rounded-lg border focus:border-blue-900 text-slate-800 rounder border-slate-500"
+            class="form-input"
           />
         </section>
-        <div class="grid grid-cols-2 gap-2 p-4">
-          <button
-            class="block p-3 w-full text-lg font-semibold text-white bg-red-800 rounded-lg shadow-xl hover:text-white hover:bg-red-500"
-          >
-            Cancel
-          </button>
-          <button
-            class="block p-3 w-full text-lg font-semibold text-white bg-green-800 rounded-lg shadow-xl hover:text-white hover:bg-green-500"
-            :disabled="isWorking"
-            type="submit"
-          >
-            Register
+        <div class="grid-buttons">
+          <button class="button-red">Cancel</button>
+          <button class="button-green" :disabled="isWorking" type="submit">
+            Save
           </button>
         </div>
       </form>
     </div>
 
     <!-- right -->
-    <div class="p-4 rounded-md bg-slate-400">
-      <table class="min-w-full text-sm font-light text-left">
-        <thead
-          class="font-medium border-b bg-slate-800 dark:border-neutral-500"
-        >
+    <div class="grid-right">
+      <table class="t-table">
+        <thead class="t-thead">
           <tr>
             <th>Bank</th>
             <th>Agency</th>
@@ -67,11 +55,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr
-            v-for="b in banks.data"
-            :key="b.id"
-            class="border-b dark:border-neutral-500"
-          >
+          <tr v-for="b in banks.data" :key="b.id" class="t-tr-line">
             <td>{{ b.name }}</td>
             <td>{{ b.agency }}</td>
             <td>{{ b.account }}</td>
@@ -79,14 +63,14 @@
               <Icon
                 name="mdi-light:delete"
                 class="transition duration-200 ease-in-out hover:scale-125"
-                color="red"
+                color="green"
                 size="24px"
                 @click="deleteBank(b['id'])"
               />
               <Icon
                 name="mdi-light:pencil"
                 class="transition duration-200 ease-in-out hover:scale-125"
-                color="green"
+                color="red"
                 size="24px"
                 @click="editBank(b['id'])"
               />
@@ -120,14 +104,7 @@ let error = ref(null);
 
 let banks = ref([]);
 
-// onBeforeMount(async () => {
 banks.value = await useFetch("/api/bank/getall");
-// const { data: banks } = await useFetch("/api/prisma/get-all-banks");
-// console.log(banks);
-// setTimeout(() => {
-//   console.log(" loading ... ");
-// }, 2000);
-// });
 
 const deleteBank = async (id: Number) => {
   await useFetch(`/api/bank/delete/${id}`, {

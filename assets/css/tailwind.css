@@ -2,10 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
+/**
+* Luna Travel Monetary Services 
+*
+* CSS Customs
+**/
+
 tr:nth-child(even) {
   @apply bg-slate-300 text-slate-800;
 }
 
 tr:nth-child(od) {
   @apply bg-slate-300 text-slate-900;
+}
+
+.form-title {
+  @apply mb-2 text-xl font-medium tracking-wider text-slate-800;
+}
+
+.form-label {
+  @apply px-1 text-sm text-slate-900;
+}
+
+.form-input {
+  @apply block p-1 w-full rounded-lg border focus:border-blue-900 text-slate-800 rounded border-slate-500;
+}
+
+.form-section {
+  @apply mb-1 px-2;
+}
+
+.button-red {
+  @apply block p-3 w-full text-lg font-semibold text-white bg-red-800 rounded-lg shadow-xl hover:text-white hover:bg-red-500;
+}
+
+.button-green {
+  @apply block p-3 w-full text-lg font-semibold text-white bg-green-800 rounded-lg shadow-xl hover:text-white hover:bg-green-500;
+}
+
+.t-table {
+  @apply min-w-full text-sm font-light text-left;
+}
+
+.t-thead {
+  @apply font-medium border-b bg-slate-800 dark:border-neutral-500;
+}
+
+.t-tr-line {
+  @apply border-b dark:border-neutral-500;
+}
+
+.grid-2cols {
+  @apply grid grid-cols-2 gap-2 p-2 mx-auto;
+}
+
+.grid-left {
+  @apply p-4 rounded-md bg-slate-400;
+}
+
+.grid-right {
+  @apply p-4 rounded-md bg-slate-400;
+}
+
+.grid-buttons {
+  @apply grid grid-cols-2 gap-2 p-4;
 }

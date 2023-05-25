@@ -6,7 +6,7 @@ devDependencies:
     version: 8.0.0-beta.12(vue@3.3.4)
   '@nuxtjs/tailwindcss':
     specifier: ^6.7.0
-    version: 6.7.0(webpack@5.83.1)
+    version: 6.7.0(webpack@5.84.0)
   '@prisma/client':
     specifier: ^4.14.1
     version: 4.14.1(prisma@4.14.1)
@@ -876,15 +876,15 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxt/postcss8@1.1.3(webpack@5.83.1):
+  /@nuxt/postcss8@1.1.3(webpack@5.84.0):
     resolution: {integrity: sha512-CdHtErhvQwueNZPBOmlAAKrNCK7aIpZDYhtS7TzXlSgPHHox1g3cSlf+Ke9oB/8t4mNNjdB+prclme2ibuCOEA==}
     dependencies:
       autoprefixer: 10.4.14(postcss@8.4.23)
-      css-loader: 5.2.7(webpack@5.83.1)
+      css-loader: 5.2.7(webpack@5.84.0)
       defu: 3.2.2
       postcss: 8.4.23
       postcss-import: 13.0.0(postcss@8.4.23)
-      postcss-loader: 4.3.0(postcss@8.4.23)(webpack@5.83.1)
+      postcss-loader: 4.3.0(postcss@8.4.23)(webpack@5.84.0)
       postcss-url: 10.1.3(postcss@8.4.23)
       semver: 7.5.1
     transitivePeerDependencies:
@@ -1047,11 +1047,11 @@ packages:
       - vue-router
     dev: true
 
-  /@nuxtjs/tailwindcss@6.7.0(webpack@5.83.1):
+  /@nuxtjs/tailwindcss@6.7.0(webpack@5.84.0):
     resolution: {integrity: sha512-Ixm4hWFKoM2bbtixJZ6/+bm1y/aZPefOkfED5zV4P3X/18HVJQfGD3icTHxDEc9hqRxMV0DVPwpBM13eo1yTlg==}
     dependencies:
       '@nuxt/kit': 3.5.1
-      '@nuxt/postcss8': 1.1.3(webpack@5.83.1)
+      '@nuxt/postcss8': 1.1.3(webpack@5.84.0)
       autoprefixer: 10.4.14(postcss@8.4.23)
       chokidar: 3.5.3
       clear-module: 4.1.2
@@ -2261,7 +2261,7 @@ packages:
       postcss: 8.4.23
     dev: true
 
-  /css-loader@5.2.7(webpack@5.83.1):
+  /css-loader@5.2.7(webpack@5.84.0):
     resolution: {integrity: sha512-Q7mOvpBNBG7YrVGMxRxcBJZFL75o+cH2abNASdibkj/fffYD8qWbInZrD0S9ccI6vZclF3DsHE7njGlLtaHbhg==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -2277,7 +2277,7 @@ packages:
       postcss-value-parser: 4.2.0
       schema-utils: 3.1.2
       semver: 7.5.1
-      webpack: 5.83.1
+      webpack: 5.84.0
     dev: true
 
   /css-select@5.1.0:
@@ -4667,7 +4667,7 @@ packages:
       yaml: 2.3.0
     dev: true
 
-  /postcss-loader@4.3.0(postcss@8.4.23)(webpack@5.83.1):
+  /postcss-loader@4.3.0(postcss@8.4.23)(webpack@5.84.0):
     resolution: {integrity: sha512-M/dSoIiNDOo8Rk0mUqoj4kpGq91gcxCfb9PoyZVdZ76/AuhxylHDYZblNE8o+EQ9AMSASeMFEKxZf5aU6wlx1Q==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -4680,7 +4680,7 @@ packages:
       postcss: 8.4.23
       schema-utils: 3.1.2
       semver: 7.5.1
-      webpack: 5.83.1
+      webpack: 5.84.0
     dev: true
 
   /postcss-merge-longhand@6.0.0(postcss@8.4.23):
@@ -5592,7 +5592,7 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /terser-webpack-plugin@5.3.9(webpack@5.83.1):
+  /terser-webpack-plugin@5.3.9(webpack@5.84.0):
     resolution: {integrity: sha512-ZuXsqE07EcggTWQjXUj+Aot/OMcD0bMKGgF63f7UxYcu5/AJF53aIpK1YoP5xR9l6s/Hy2b+t1AM0bLNPRuhwA==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -5613,7 +5613,7 @@ packages:
       schema-utils: 3.1.2
       serialize-javascript: 6.0.1
       terser: 5.17.6
-      webpack: 5.83.1
+      webpack: 5.84.0
     dev: true
 
   /terser@5.17.6:
@@ -6172,8 +6172,8 @@ packages:
     resolution: {integrity: sha512-kyDivFZ7ZM0BVOUteVbDFhlRt7Ah/CSPwJdi8hBpkK7QLumUqdLtVfm/PX/hkcnrvr0i77fO5+TjZ94Pe+C9iw==}
     dev: true
 
-  /webpack@5.83.1:
-    resolution: {integrity: sha512-TNsG9jDScbNuB+Lb/3+vYolPplCS3bbEaJf+Bj0Gw4DhP3ioAflBb1flcRt9zsWITyvOhM96wMQNRWlSX52DgA==}
+  /webpack@5.84.0:
+    resolution: {integrity: sha512-XezNK3kwJq6IyeoZmZ1uEqQs+42nTqIi4jYM/YjLwaJedUC1N3bwnCC0+UcnHJPfqWX0kGrQnMIvZZyWYaIZrA==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     peerDependencies:
@@ -6203,7 +6203,7 @@ packages:
       neo-async: 2.6.2
       schema-utils: 3.1.2
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.9(webpack@5.83.1)
+      terser-webpack-plugin: 5.3.9(webpack@5.84.0)
       watchpack: 2.4.0
       webpack-sources: 3.2.3
     transitivePeerDependencies:
