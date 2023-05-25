@@ -13,7 +13,7 @@
             v-model="name"
             inputType="text"
             :error="error && error.type == 'name' ? error.message : ''"
-            class="block p-1 w-full rounded-lg border focus:border-blue-900 rounder border-slate-500"
+            class="block p-1 w-full rounded-lg border focus:border-blue-900 text-slate-800 rounder border-slate-500"
           />
         </section>
         <section class="mb4-px-2">
@@ -23,7 +23,7 @@
             v-model="agency"
             inputType="text"
             :error="error && error.type == 'agency' ? error.message : ''"
-            class="block p-1 w-full rounded-lg border focus:border-blue-900 rounder border-slate-500"
+            class="block p-1 w-full rounded-lg border focus:border-blue-900 text-slate-800 rounder border-slate-500"
           />
         </section>
         <section class="mb4-px-2">
@@ -33,7 +33,7 @@
             v-model="account"
             inputType="text"
             :error="error && error.type == 'account' ? error.message : ''"
-            class="block p-1 w-full rounded-lg border focus:border-blue-900 rounder border-slate-500"
+            class="block p-1 w-full rounded-lg border focus:border-blue-900 text-slate-800 rounder border-slate-500"
           />
         </section>
         <div class="grid grid-cols-2 gap-2 p-4">
