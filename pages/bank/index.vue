@@ -7,7 +7,7 @@
       </h2>
       <form @submit.preven="submit()">
         <section class="mb4-px-2">
-          <span class="px-1 text-sm">Bank Name</span>
+          <span class="px-1 text-sm text-slate-900">Bank Name</span>
           <input
             placeholder=""
             v-model="name"
@@ -17,7 +17,7 @@
           />
         </section>
         <section class="mb4-px-2">
-          <span class="px-1 text-sm">Agency</span>
+          <span class="px-1 text-sm text-slate-900">Agency</span>
           <input
             placeholder=""
             v-model="agency"
@@ -27,7 +27,7 @@
           />
         </section>
         <section class="mb4-px-2">
-          <span class="px-1 text-sm">Account</span>
+          <span class="px-1 text-sm text-slate-900">Account</span>
           <input
             placeholder=""
             v-model="account"
