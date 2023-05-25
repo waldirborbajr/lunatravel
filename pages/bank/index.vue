@@ -55,11 +55,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="b in banks.data" :key="b.id" class="t-tr-line">
+          <tr v-for="b in banks.data" :key="b.id" class="tr-line">
             <td>{{ b.name }}</td>
             <td>{{ b.agency }}</td>
             <td>{{ b.account }}</td>
-            <td class="flex gap-6">
+            <td class="td-gap-icons">
               <Icon
                 name="mdi-light:delete"
                 class="transition duration-200 ease-in-out hover:scale-125"

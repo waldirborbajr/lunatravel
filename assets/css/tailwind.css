@@ -48,8 +48,12 @@ tr:nth-child(od) {
   @apply font-medium border-b bg-slate-800 dark:border-neutral-500;
 }
 
-.t-tr-line {
+.tr-line {
   @apply border-b dark:border-neutral-500;
+}
+
+.td-gap-icons {
+  @apply flex gap-6;
 }
 
 .grid-2cols {
