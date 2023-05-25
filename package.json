@@ -13,12 +13,11 @@
   "description": "Luna Travel Monetary Services",
   "private": true,
   "scripts": {
-    "buildprod": "npx prisma migrate deploy && nuxt build",
-    "build": "prisma generate && nuxt build",
+    "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "prisma generate && nuxt prepare"
   },
   "prisma": {
     "seed": "node prisma/seed.ts"
