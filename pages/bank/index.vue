@@ -54,7 +54,7 @@
     </div>
 
     <!-- right -->
-    <div class="p-4 bg-slate-400 rounded-md">
+    <div class="p-4 rounded-md bg-slate-400">
       <table class="min-w-full text-sm font-light text-left">
         <thead
           class="font-medium border-b bg-slate-800 dark:border-neutral-500"
@@ -99,6 +99,10 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  // middleware: 'auth'
+});
+
 useHead({
   title: "Bank Management",
 });
