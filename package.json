@@ -23,16 +23,19 @@
     "seed": "node prisma/seed.ts"
   },
   "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^10.1.0",
     "@nuxtjs/i18n": "8.0.0-beta.12",
     "@nuxtjs/tailwindcss": "^6.7.0",
-    "@prisma/client": "^4.14.1",
     "@types/node": "^18.16.14",
     "autoprefixer": "^10.4.14",
     "nuxt": "^3.5.1",
     "nuxt-icon": "^0.4.1",
     "postcss": "^8.4.23",
     "prisma": "^4.14.1",
-    "prisma-erd": "^0.1.1",
+    "prisma-erd-generator": "^1.6.0",
     "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.14.1"
   }
 }
