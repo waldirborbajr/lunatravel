@@ -53,14 +53,10 @@ export default defineNuxtConfig({
 
   // Build
   css: ["@/assets/css/tailwind.css"],
-  build: {
-    postcss: {
-      postcssOptions: {
-        plugins: {
-          tailwindcss: {},
-          autoprefixer: {},
-        },
-      },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
     },
   },
 });

@@ -45,7 +45,7 @@ tr:nth-child(od) {
 }
 
 .t-thead {
-  @apply font-medium border-b bg-slate-800 dark:border-neutral-500;
+  @apply font-medium border-b bg-slate-800 text-slate-100 dark:border-neutral-500;
 }
 
 .tr-line {

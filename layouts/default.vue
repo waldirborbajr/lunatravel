@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen DefaultLayout bg-slate-700 text-slate-50">
+  <div class="h-screen DefaultLayout">
     <Header />
     <!-- Here Nuxt will replace page content -->
     <slot />

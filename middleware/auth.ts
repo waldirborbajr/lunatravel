@@ -1,7 +1,9 @@
-export default defineNuxtRouteMiddleware(async (to) => {
-  const user = await userUser();
+export default defineNuxtRouteMiddleware((to) => {
+  console.log("middleware");
+  // const isLogged = ref(false);
 
-  if (user == null && user == undefined) {
-    return "/";
-  }
+  // if (isLogged) {
+  //   return navigateTo(to.fullPath);
+  // }
+  // return navigateTo("/login");
 });
