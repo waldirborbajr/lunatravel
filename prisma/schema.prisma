@@ -21,6 +21,9 @@ model City {
   updated_at DateTime   @updatedAt
   deleted_at DateTime?
   Customer   Customer[]
+
+  @@index([name])
+  @@map("city")
 }
 
 model Identification {
@@ -30,6 +33,9 @@ model Identification {
   updated_at DateTime   @updatedAt
   deleted_at DateTime?
   Customer   Customer[]
+
+  @@index([name])
+  @@map("identification")
 }
 
 model ClassCustomer {
@@ -40,6 +46,9 @@ model ClassCustomer {
   updated_at   DateTime   @updatedAt
   deleted_at   DateTime?
   Customer     Customer[]
+
+  @@index([name])
+  @@map("classcutomer")
 }
 
 model Bank {
@@ -50,6 +59,9 @@ model Bank {
   created_at DateTime  @default(now())
   updated_at DateTime  @updatedAt
   deleted_at DateTime?
+
+  @@index([name])
+  @@map("bank")
 }
 
 model User {
@@ -62,6 +74,9 @@ model User {
   updated_at DateTime  @updatedAt
   deleted_at DateTime?
   sessionId  Int?
+
+  @@index([name])
+  @@map("user")
 }
 
 // birthDate DateTime @db.Date
@@ -91,6 +106,9 @@ model Customer {
   classCustomerId  Int?
   identificationId Int?
   cashflow         Cashflow[]
+
+  @@index([name])
+  @@map("customer")
 }
 
 // prince Decimal  @mysql.Decimal(10, 2)
@@ -104,6 +122,8 @@ model Parameter {
   created_at         DateTime  @default(now())
   updated_at         DateTime  @updatedAt
   deleted_at         DateTime?
+
+  @@map("parameter")
 }
 
 model Cashflow {
@@ -133,6 +153,8 @@ model Cashflow {
   deleted_at             DateTime?
   customer               Customer? @relation(fields: [customerId], references: [id])
   customerId             Int?
+
+  @@map("cashflow")
 }
 
 enum Role {
