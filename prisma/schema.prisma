@@ -1,4 +1,3 @@
-
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
@@ -15,11 +14,39 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model City {
+  id         Int        @id @default(autoincrement())
+  name       String
+  created_at DateTime   @default(now())
+  updated_at DateTime   @updatedAt
+  deleted_at DateTime?
+  Customer   Customer[]
+}
+
+model Identification {
+  id         Int        @id @default(autoincrement())
+  name       String
+  created_at DateTime   @default(now())
+  updated_at DateTime   @updatedAt
+  deleted_at DateTime?
+  Customer   Customer[]
+}
+
+model ClassCustomer {
+  id           Int        @id @default(autoincrement())
+  name         String
+  seeincompany Boolean
+  created_at   DateTime   @default(now())
+  updated_at   DateTime   @updatedAt
+  deleted_at   DateTime?
+  Customer     Customer[]
+}
+
 model Bank {
   id         Int       @id @default(autoincrement())
-  name       String?   @unique
-  agency     String?
-  account    String?
+  name       String    @unique
+  agency     String
+  account    String
   created_at DateTime  @default(now())
   updated_at DateTime  @updatedAt
   deleted_at DateTime?
@@ -27,21 +54,88 @@ model Bank {
 
 model User {
   id         Int       @id @default(autoincrement())
-  name       String?
-  username   String?
-  password   String?
-  session    Session?
+  name       String
+  username   String    @unique
+  password   String
+  role       Role      @default(USER)
   created_at DateTime  @default(now())
   updated_at DateTime  @updatedAt
   deleted_at DateTime?
+  sessionId  Int?
 }
 
-model Session {
-  id         Int       @id @default(autoincrement())
-  authToken  String    @unique
-  user       User      @relation(fields: [userId], references: [id])
-  userId     Int       @unique
-  created_at DateTime  @default(now())
-  updated_at DateTime  @updatedAt
-  deleted_at DateTime?
+// birthDate DateTime @db.Date
+model Customer {
+  id               Int             @id @default(autoincrement())
+  name             String
+  city             City?           @relation(fields: [cityId], references: [id])
+  classcutomer     ClassCustomer?  @relation(fields: [classCustomerId], references: [id])
+  indetification   Identification? @relation(fields: [identificationId], references: [id])
+  zipcode          String
+  address          String
+  phone1           String
+  phone2           String
+  email            String
+  birthDate        DateTime
+  idcardnumber     String
+  comission        Float
+  attention        String
+  restriction      Boolean
+  active           Boolean
+  picturepath      String
+  created_at       DateTime        @default(now())
+  updated_at       DateTime        @updatedAt
+  deleted_at       DateTime?
+  Parameter        Parameter[]
+  cityId           Int?
+  classCustomerId  Int?
+  identificationId Int?
+  cashflow         Cashflow[]
+}
+
+// prince Decimal  @mysql.Decimal(10, 2)
+model Parameter {
+  id                 Int       @id @default(autoincrement())
+  customer           Customer  @relation(fields: [customerId], references: [id])
+  customerId         Int
+  exchange_vl_month  Float     @default(0.00)
+  exchange_vl_year   Float     @default(0.00)
+  exchange_comission Float     @default(0.00)
+  created_at         DateTime  @default(now())
+  updated_at         DateTime  @updatedAt
+  deleted_at         DateTime?
+}
+
+model Cashflow {
+  id                     Int       @id @default(autoincrement())
+  datecashflow           DateTime
+  tcsahflow              Decimal
+  amountcashflow         Decimal
+  valuecashflow          Decimal
+  centsone               Decimal
+  centstwo               Decimal
+  checknumber            String
+  precentcashflow        Decimal
+  valuepercentcashflow   Decimal
+  airpercentcashflow     Decimal
+  aircomissioncashflow   Decimal
+  airreservationcashflow Decimal
+  airdateemitcashflow    Decimal
+  subtotalcashflow       Decimal
+  totalcashflow          Decimal
+  totaltopaycashflow     Decimal
+  wirecashflow           Decimal
+  vincashflow            Decimal
+  description            String
+  observation            String
+  created_at             DateTime  @default(now())
+  updated_at             DateTime  @updatedAt
+  deleted_at             DateTime?
+  customer               Customer? @relation(fields: [customerId], references: [id])
+  customerId             Int?
+}
+
+enum Role {
+  USER
+  ADMIN
 }
