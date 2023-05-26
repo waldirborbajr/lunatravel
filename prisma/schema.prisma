@@ -69,7 +69,7 @@ model User {
   name       String
   username   String    @unique
   password   String
-  role       Role      @default(USER)
+  // role       Role      @default(USER)
   created_at DateTime  @default(now())
   updated_at DateTime  @updatedAt
   deleted_at DateTime?
@@ -157,7 +157,7 @@ model Cashflow {
   @@map("cashflow")
 }
 
-enum Role {
-  USER
-  ADMIN
-}
+//enum Role {
+//  USER
+//  ADMIN
+//}

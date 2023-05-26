@@ -32,6 +32,7 @@
     "nuxt-icon": "^0.4.1",
     "postcss": "^8.4.23",
     "prisma": "^4.14.1",
+    "prisma-erd": "^0.1.1",
     "tailwindcss": "^3.3.2"
   }
 }
