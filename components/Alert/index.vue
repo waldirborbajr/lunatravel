@@ -1,6 +1,6 @@
 <template>
   <div class="py-4 px-4 mb-4 bg-green-700 rounded Alert text-slate-200">
-    Green Alert
+    {{EVENTS}}
   </div>
 </template>
 

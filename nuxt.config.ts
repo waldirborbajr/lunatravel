@@ -1,16 +1,18 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  page: true,
+  // page: true,
 
-  head: {
-    title: "Luna Travel Monetary Services",
-    htmlAttrs: {
-      lang: "en",
+  app: {
+    head: {
+      title: "Luna Travel Monetary Services",
+      htmlAttrs: {
+        lang: "en",
+      },
+      meta: [
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+      ],
     },
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-    ],
   },
 
   modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@nuxtjs/i18n"],
@@ -48,11 +50,9 @@ export default defineNuxtConfig({
     viewer: true,
   },
 
-  // False it is user render mode
-  // ssr: false,
-
   // Build
   css: ["@/assets/css/tailwind.css"],
+
   postcss: {
     plugins: {
       tailwindcss: {},
