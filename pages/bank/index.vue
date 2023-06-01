@@ -129,53 +129,54 @@ const editBank = async (id: BigInt) => {
 };
 
 const submit = async () => {
-  isWorking.value = true;
-  error.value = null;
+  console.log("Submit called");
+  // isWorking.value = true;
+  // error.value = null;
 
-  if (!name.value) {
-    error.value = {
-      type: "name",
-      message: "A name is required",
-    };
-  } else if (!agency.value) {
-    error.value = {
-      type: "agency",
-      message: "An agency code is required",
-    };
-  } else if (!account.value) {
-    error.value = {
-      type: "account",
-      message: "Aa account code is required",
-    };
-  }
+  // if (!name.value) {
+  //   error.value = {
+  //     type: "name",
+  //     message: "A name is required",
+  //   };
+  // } else if (!agency.value) {
+  //   error.value = {
+  //     type: "agency",
+  //     message: "An agency code is required",
+  //   };
+  // } else if (!account.value) {
+  //   error.value = {
+  //     type: "account",
+  //     message: "Aa account code is required",
+  //   };
+  // }
 
-  if (error.value) {
-    isWorking.value = false;
-    return;
-  }
+  // if (error.value) {
+  //   isWorking.value = false;
+  //   return;
+  // }
 
-  if (isUpdate.value) {
-    await useFetch(`/api/bank/update/${bankid.value}`, {
-      method: "PATCH",
-      body: {
-        id: bankid.value,
-        name: name.value,
-        agency: agency.value,
-        account: account.value,
-      },
-    });
-  } else {
-    await useFetch(`/api/bank/create/`, {
-      method: "POST",
-      body: {
-        name: name.value,
-        agency: agency.value,
-        account: account.value,
-      },
-    });
-  }
+  // if (isUpdate.value) {
+  //   await useFetch(`/api/bank/update/${bankid.value}`, {
+  //     method: "PATCH",
+  //     body: {
+  //       id: bankid.value,
+  //       name: name.value,
+  //       agency: agency.value,
+  //       account: account.value,
+  //     },
+  //   });
+  // } else {
+  //   await useFetch(`/api/bank/create/`, {
+  //     method: "POST",
+  //     body: {
+  //       name: name.value,
+  //       agency: agency.value,
+  //       account: account.value,
+  //     },
+  //   });
+  // }
 
-  isWorking.value = false;
+  // isWorking.value = false;
 };
 </script>
 
