@@ -17,6 +17,22 @@ export default defineNuxtConfig({
 
   modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@nuxtjs/i18n"],
 
+  i18n: {
+    locales: [
+      {
+        code: "en",
+        file: "en.js",
+      },
+      {
+        code: "pt_br",
+        file: "pt.js",
+      },
+    ],
+    lazy: true,
+    langDir: "lang",
+    defaultLocale: "en",
+  },
+
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
     configPath: "tailwind.config",

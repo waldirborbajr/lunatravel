@@ -2,10 +2,10 @@
   <div class="grid-2cols">
     <!-- left -->
     <div class="grid-left">
-      <h2 class="form-title">Bank Management</h2>
+      <h2 class="form-title">{{ $("BANK") }}</h2>
       <form @submit.preven="submit()">
         <section class="form-section">
-          <span class="form-label">Bank Name</span>
+          <span class="form-label">{{ $("BANK_NAME") }}</span>
           <input
             placeholder=""
             v-model="name"
@@ -15,7 +15,7 @@
           />
         </section>
         <section class="form-section">
-          <span class="form-label">Agency</span>
+          <span class="form-label">{{ $("BANK_AGENCY") }}</span>
           <input
             placeholder=""
             v-model="agency"
@@ -25,7 +25,7 @@
           />
         </section>
         <section class="form-section">
-          <span class="form-label">Account</span>
+          <span class="form-label">{{ $("BANK_ACCOUNT") }}</span>
           <input
             placeholder=""
             v-model="account"
@@ -87,11 +87,9 @@ definePageMeta({
   middleware: "auth",
 });
 
-
-
-useHead({
-  title: "Bank Management",
-});
+// useHead({
+//   title: {{$("BANK")},
+// });
 
 let bankid = ref(null);
 let name = ref(null);
