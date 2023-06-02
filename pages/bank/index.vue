@@ -2,42 +2,39 @@
   <div class="grid-2cols">
     <!-- left -->
     <div class="grid-left">
-      <h2 class="form-title">{{ $("BANK") }}</h2>
+      <h2 class="form-title">{{ $t("BANK") }}</h2>
       <form @submit.preven="submit()">
         <section class="form-section">
-          <span class="form-label">{{ $("BANK_NAME") }}</span>
+          <span class="form-label">{{ $t("BANK_NAME") }}</span>
           <input
             placeholder=""
             v-model="name"
             inputType="text"
-            :error="error && error.type == 'name' ? error.message : ''"
             class="form-input"
           />
         </section>
         <section class="form-section">
-          <span class="form-label">{{ $("BANK_AGENCY") }}</span>
+          <span class="form-label">{{ $t("BANK_AGENCY") }}</span>
           <input
             placeholder=""
             v-model="agency"
             inputType="text"
-            :error="error && error.type == 'agency' ? error.message : ''"
             class="form-input"
           />
         </section>
         <section class="form-section">
-          <span class="form-label">{{ $("BANK_ACCOUNT") }}</span>
+          <span class="form-label">{{ $t("BANK_ACCOUNT") }}</span>
           <input
             placeholder=""
             v-model="account"
             inputType="text"
-            :error="error && error.type == 'account' ? error.message : ''"
             class="form-input"
           />
         </section>
         <div class="grid-buttons">
-          <button class="button-red">Cancel</button>
+          <button class="button-red">{{ $t("BT_CANCEL") }}</button>
           <button class="button-green" :disabled="isWorking" type="submit">
-            Save
+            {{ $t("BT_SAVE") }}
           </button>
         </div>
       </form>
@@ -88,7 +85,7 @@ definePageMeta({
 });
 
 // useHead({
-//   title: {{$("BANK")},
+//   title: {{$t("BANK")}},
 // });
 
 let bankid = ref(null);
@@ -130,53 +127,53 @@ const editBank = async (id: BigInt) => {
 
 const submit = async () => {
   console.log("Submit called");
-  // isWorking.value = true;
-  // error.value = null;
+  isWorking.value = true;
+  error.value = null;
 
-  // if (!name.value) {
-  //   error.value = {
-  //     type: "name",
-  //     message: "A name is required",
-  //   };
-  // } else if (!agency.value) {
-  //   error.value = {
-  //     type: "agency",
-  //     message: "An agency code is required",
-  //   };
-  // } else if (!account.value) {
-  //   error.value = {
-  //     type: "account",
-  //     message: "Aa account code is required",
-  //   };
-  // }
+  if (!name.value) {
+    error.value = {
+      type: "name",
+      message: "A name is required",
+    };
+  } else if (!agency.value) {
+    error.value = {
+      type: "agency",
+      message: "An agency code is required",
+    };
+  } else if (!account.value) {
+    error.value = {
+      type: "account",
+      message: "Aa account code is required",
+    };
+  }
 
-  // if (error.value) {
-  //   isWorking.value = false;
-  //   return;
-  // }
+  if (error.value) {
+    isWorking.value = false;
+    return;
+  }
 
-  // if (isUpdate.value) {
-  //   await useFetch(`/api/bank/update/${bankid.value}`, {
-  //     method: "PATCH",
-  //     body: {
-  //       id: bankid.value,
-  //       name: name.value,
-  //       agency: agency.value,
-  //       account: account.value,
-  //     },
-  //   });
-  // } else {
-  //   await useFetch(`/api/bank/create/`, {
-  //     method: "POST",
-  //     body: {
-  //       name: name.value,
-  //       agency: agency.value,
-  //       account: account.value,
-  //     },
-  //   });
-  // }
+  if (isUpdate.value) {
+    await useFetch(`/api/bank/update/${bankid.value}`, {
+      method: "PATCH",
+      body: {
+        id: bankid.value,
+        name: name.value,
+        agency: agency.value,
+        account: account.value,
+      },
+    });
+  } else {
+    await useFetch(`/api/bank/create/`, {
+      method: "POST",
+      body: {
+        name: name.value,
+        agency: agency.value,
+        account: account.value,
+      },
+    });
+  }
 
-  // isWorking.value = false;
+  isWorking.value = false;
 };
 </script>
 

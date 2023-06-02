@@ -5,42 +5,42 @@
     <NuxtLink
       class="flex justify-center items-center mr-10 text-base font-medium tracking-tight text-opacity-90 transition duration-150 ease-in-out hover:text-cool-gray-600 text-slate-800"
       to="/customer"
-      >Customer</NuxtLink
+      >{{ $t("MENU_CUSTOMER") }}</NuxtLink
     >
     <NuxtLink
       class="flex justify-center items-center mr-10 text-base font-medium tracking-tight text-opacity-90 transition duration-150 ease-in-out hover:text-cool-gray-600 text-slate-800"
       to="/bank"
-      >Bank</NuxtLink
+      >{{ $t("MENU_BANK") }}</NuxtLink
     >
     <NuxtLink
       class="flex justify-center items-center mr-10 text-base font-medium tracking-tight text-opacity-90 transition duration-150 ease-in-out hover:text-cool-gray-600 text-slate-800"
       to="/city"
-      >City</NuxtLink
+      >{{ $t("MENU_CITY") }}</NuxtLink
     >
     <NuxtLink
       class="flex justify-center items-center mr-10 text-base font-medium tracking-tight text-opacity-90 transition duration-150 ease-in-out hover:text-cool-gray-600 text-slate-800"
       to="/identification"
-      >Identification</NuxtLink
+      >{{ $t("MENU_IDENTIFICATION") }}</NuxtLink
     >
     <NuxtLink
       class="flex justify-center items-center mr-10 text-base font-medium tracking-tight text-opacity-90 transition duration-150 ease-in-out hover:text-cool-gray-600 text-slate-800"
       to="/parameter"
-      >Parameter</NuxtLink
+      >{{ $t("MENU_PARAMETER") }}</NuxtLink
     >
     <NuxtLink
       class="flex justify-center items-center mr-10 text-base font-medium tracking-tight text-opacity-90 transition duration-150 ease-in-out hover:text-cool-gray-600 text-slate-800"
       to="/reports"
-      >Reports</NuxtLink
+      >{{ $t("MENU_REPORT") }}</NuxtLink
     >
     <NuxtLink
       class="flex justify-center items-center mr-10 text-base font-medium tracking-tight text-opacity-90 transition duration-150 ease-in-out hover:text-cool-gray-600 text-slate-800"
       to="/user"
-      >User</NuxtLink
+      >{{ $t("MENU_USER") }}</NuxtLink
     >
     <NuxtLink
       class="flex justify-center items-center mr-10 text-base font-medium tracking-tight text-opacity-90 transition duration-150 ease-in-out hover:text-cool-gray-600 text-slate-800"
       to="/login"
-      >Logout</NuxtLink
+      >{{ $t("MENU_LOGOUT") }}</NuxtLink
     >
   </div>
 </template>
