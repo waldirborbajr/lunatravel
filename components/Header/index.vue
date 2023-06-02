@@ -9,7 +9,7 @@
           size="34"
           class="pr-2"
         />
-        Luna Travel Monetary Services
+        {{ $t("COMPANY") }}
       </div>
       <Menu />
     </div>

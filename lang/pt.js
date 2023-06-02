@@ -18,6 +18,8 @@ export default {
   BT_CANCEL: "Cancela",
   BT_SAVE: "Gravar",
 
+  COMPANY: "Luna Travel Servico Monetarios",
+
   PORTUGUESE: "Português",
   ENGLISH: "Inglês",
   ALERT_MSG: "Aviso em Verde",
