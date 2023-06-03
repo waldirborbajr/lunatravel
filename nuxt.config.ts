@@ -15,22 +15,15 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@nuxtjs/i18n", "@element-plus/nuxt"],
+  modules: [
+    "@nuxtjs/tailwindcss", 
+    "nuxt-icon", 
+    "@nuxtjs/i18n", 
+    "@element-plus/nuxt"
+  ],
 
   i18n: {
-    locales: [
-      {
-        code: "en",
-        file: "en.js",
-      },
-      {
-        code: "pt_br",
-        file: "pt.js",
-      },
-    ],
-    lazy: true,
-    langDir: "lang",
-    defaultLocale: "en",
+    vueI18n:'./i18n.config.ts'
   },
 
   tailwindcss: {
