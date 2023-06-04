@@ -1,0 +1,25 @@
+{
+"HOME": "Inicio",
+"BANK": "Administración de banco",
+"BANK_NAME": "Nombre del banco",
+"BANK_AGENCY": "Agencia",
+"BANK_ACCOUNT": "Cuenta",
+
+"MENU_CUSTOMER": "Cliente",
+"MENU_BANK": "Banco",
+"MENU_CITY": "Ciudad",
+"MENU_IDENTIFICATION": "Identificación",
+"MENU_PARAMETER": "Parámetro",
+"MENU_REPORT": "Informes",
+"MENU_USER": "Usuario",
+"MENU_LOGOUT": "Cerrar sesión",
+
+"BT_CANCEL": "Cancelar",
+"BT_SAVE": "Guardar",
+
+"COMPANY": "Servicios Monetary Services",
+
+"PORTUGUESE": "Portugués",
+"ENGLISH": "Inglés",
+"ALERT_MSG": "Alerta verde",
+}
