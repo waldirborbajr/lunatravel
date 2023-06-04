@@ -1,5 +1,6 @@
 {
   "HOME": "Home",
+
   "BANK": "Bank Management",
   "BANK_NAME": "Bank Name",
   "BANK_AGENCY": "Agency",
@@ -10,7 +11,7 @@
   "MENU_CITY": "City",
   "MENU_IDENTIFICATION": "Identification",
   "MENU_PARAMETER": "Paramenter",
- "MENU_REPORT": "Reprts",
+  "MENU_REPORT": "Reprts",
   "MENU_USER": "User",
   "MENU_LOGOUT": "Logout",
 

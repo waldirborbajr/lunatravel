@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     head: {
       title: "Luna Travel Monetary Services",
       htmlAttrs: {
-        lang: "en",
+        lang: "en-US",
       },
       meta: [
         { charset: "utf-8" },
@@ -23,7 +23,29 @@ export default defineNuxtConfig({
   ],
 
   i18n: {
-    vueI18n:'./i18n.config.ts'
+
+    legacy:false,
+    langDir: "locales",
+    defaultLocale: "en-US",
+    // globalInjection: true,
+    lazy: true,
+    locale:'en-US',
+    strategy:"prefix_except_default",
+    locales: [
+      {
+        code: "en-US",
+        iso:"en-US",
+        name:"English(US)",
+        file: "en-US.json",
+      },
+      {
+        code: "pt-BR",
+        iso:"pt-BR",
+        name:"Portuges(BR)",
+        file: "pt-BR.json",
+      },
+    ],
+    // vueI18n:'./i18n.config.ts'
   },
 
   tailwindcss: {
