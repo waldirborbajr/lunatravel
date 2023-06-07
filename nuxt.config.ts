@@ -15,38 +15,40 @@ export default defineNuxtConfig({
     },
   },
 
+  typescript: { shim: false },
+
   modules: [
-    "@nuxtjs/tailwindcss", 
-    "nuxt-icon", 
-    "@nuxtjs/i18n", 
-    "@element-plus/nuxt"
+    "@nuxtjs/tailwindcss",
+    "nuxt-icon",
+    "@nuxtjs/i18n",
+    "@element-plus/nuxt",
   ],
 
   i18n: {
-    legacy:false,
+    legacy: false,
     langDir: "locales",
     defaultLocale: "en-US",
     // globalInjection: true,
     lazy: true,
-    locale:'en-US',
-    strategy:"prefix_except_default",
+    locale: "en-US",
+    strategy: "prefix_except_default",
     locales: [
       {
         code: "en-US",
-        iso:"en-US",
-        name:"English(US)",
+        iso: "en-US",
+        name: "English(US)",
         file: "en-US.json",
       },
       {
         code: "es-ES",
-        iso:"es-ES",
-        name:"Spanish(ES)",
+        iso: "es-ES",
+        name: "Spanish(ES)",
         file: "es-ES.json",
       },
       {
         code: "pt-BR",
-        iso:"pt-BR",
-        name:"Portuges(BR)",
+        iso: "pt-BR",
+        name: "Portuges(BR)",
         file: "pt-BR.json",
       },
     ],
